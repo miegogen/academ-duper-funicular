@@ -6,3 +6,5 @@ SELECT title, author
 FROM book
 WHERE (title LIKE '_% %') AND (author LIKE '%С.%')
 ORDER BY title;
+
+SELECT author FROM book GROUP BY author;
