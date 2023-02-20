@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <a href="/academ-duper-funicular/02_lesson_HTML_XML/index.html">Home</a>
+        <a href="#">Form</a>
+        <a href="/academ-duper-funicular/02_lesson_HTML_XML/img/contract.png">Image</a>
+    </div>
+
+    <h2>Sending your data form</h2>
+    <p>Fill in all the filed and push the Register button</p>
+    <form action="/academ-duper-funicular/02_lesson_HTML_XML/index.html" method="post">
+        <label for="clientName">Your name</label>
+        <input type="text" name="clientName" id="clientName" /><br>
+        <label for="email">Your e-mail</label>
+        <input type="text" name="clientEmail" id="email"><br>
+
+        <label for="sex">Sex:</label>
+        <select name="sex" id="sex">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="none">Nope, i on my own</option>
+        </select>
+
+        <br><br>
+        <label for="dateBirth">Choose your birth date</label>
+        <input type="date" name="calendar" id="dateBirth">
+
+        <br>
+        <div id="animals"><label for="animals">You are</label>
+        <label><input type="checkbox" name="animals" value="1" checked>Dog person</label>
+        <label><input type="checkbox" name="animals" value="2">Cat person</label>
+        <label><input type="checkbox" name="animals" value="3">Other animal person</label>
+        </div>
+
+        <br><br>
+        <div>
+        <label for="country">Country</label>
+        <input type="text" name="country" id="country" placeholder="Living country">
+
+
+            <label>Resident
+                <input type="radio" name="resident" value="2" id="yeap"><label for="yeap">Yes</label>
+                <input type="radio" name="resident" value="1" id="nope" checked><label for="nope">No</label>
+            </label>
+        </div>
+
+        <br>
+        <label for="countryRel">Relation to the country</label>
+        <select name="countryRel" id="countryRel" size="3" multiple>
+            <option value="love">Love</option>
+            <option value="like">Like</option>
+            <option value="neutral">Neutral</option>
+            <option value="neutral">Dislike</option>
+            <option value="neutral">Hate</option>
+            <option value="neutral">A little want an other</option>
+        </select>
+
+        <br><br>
+        <textarea name="aboutClient" placeholder="Tell about yourself"></textarea><br>
+        <br><br>
+
+        <input type="checkbox" name="conractAccepted" id="contrAcc" />
+        <label for="contrAcc">Check box to sign agreement with the
+            <a href="/academ-duper-funicular/02_lesson_HTML_XML/getPage.html">contract</a>
+        </label>
+        <br>
+        <button type="submit">Register</button>
+    </form>
+</body>
+</html>
