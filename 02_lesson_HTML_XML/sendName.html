@@ -9,12 +9,12 @@
     <div>
         <a href="/academ-duper-funicular/02_lesson_HTML_XML/index.html">Home</a>
         <a href="#">Form</a>
-        <a href="/academ-duper-funicular/02_lesson_HTML_XML/img/contract.png">Image</a>
+        <a href="/academ-duper-funicular/02_lesson_HTML_XML/getPage.html">Image</a>
     </div>
 
     <h2>Sending your data form</h2>
     <p>Fill in all the filed and push the Register button</p>
-    <form action="/academ-duper-funicular/02_lesson_HTML_XML/index.html" method="post">
+    <form action="/someRESTserver.php" method="post">
         <label for="clientName">Your name</label>
         <input type="text" name="clientName" id="clientName" /><br>
         <label for="email">Your e-mail</label>
@@ -65,12 +65,17 @@
         <textarea name="aboutClient" placeholder="Tell about yourself"></textarea><br>
         <br><br>
 
-        <input type="checkbox" name="conractAccepted" id="contrAcc" />
+        <input type="checkbox" name="conractAccepted" id="contrAcc" onclick="enabledButton()" />
         <label for="contrAcc">Check box to sign agreement with the
             <a href="/academ-duper-funicular/02_lesson_HTML_XML/getPage.html">contract</a>
         </label>
         <br>
-        <button type="submit">Register</button>
+        <button type="submit" id="submitButton" disabled>Register</button>
     </form>
+    <script>
+        function enabledButton() {
+            document.getElementById('submitButton').disabled = false;
+        }
+    </script>
 </body>
 </html>
