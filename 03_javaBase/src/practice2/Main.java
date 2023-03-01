@@ -1,4 +1,4 @@
-package practice1;
+package practice2;
 
 import java.util.Scanner;
 
@@ -8,6 +8,10 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Введите ваше имя: ");
         String name = scanner.nextLine();
-        System.out.println("Привет, " + name + "!");
+        if (name.isEmpty()) {
+            System.out.println("Привет, неизвестный!");
+        } else {
+            System.out.println("Привет, " + name + "!");
+        }
     }
 }
