@@ -4,17 +4,17 @@ public class Main {
     public static void main(String[] args) {
         for (int i = 100; i >= 1; i--) {
 
-            if (fourMultiple(i)) {
+            if (isQuadruple(i)) {
                 System.out.println(i);
             }
         }
     }
 
-    public static boolean fourMultiple(int i) {
-        if (i % 4 == 0) {
-            return true;
-        }
-        return false;
+    // Замечания: Переименовать и упростить функцию
+
+    public static boolean isQuadruple(int i) {
+        return (i % 4) == 0 ? true : false;
     }
 
 }
+// Замечания: Переименовать и упростить функцию

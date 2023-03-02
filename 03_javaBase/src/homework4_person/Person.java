@@ -23,7 +23,9 @@ public class Person {
     }
 
     public void setName(String name) {
-        this.name = name;
+        if (!name.isEmpty()) {
+            this.name = name;
+        }
     }
 
     public String getMiddleName() {
@@ -31,7 +33,9 @@ public class Person {
     }
 
     public void setMiddleName(String middleName) {
-        this.middleName = middleName;
+        if (!middleName.isEmpty()) {
+            this.middleName = middleName;
+        }
     }
 
     public String getFamilyName() {
@@ -39,20 +43,25 @@ public class Person {
     }
 
     public void setFamilyName(String familyName) {
-        this.familyName = familyName;
+        if (!familyName.isEmpty()) {
+            this.familyName = familyName;
+        }
     }
 
-    public int getAge() {
-        return age;
-    }
+    public int getAge() { return age; }
 
     public void setAge(int age) {
-        this.age = age;
+        if (age >= 0) {
+            this.age = age;
+        }
     }
 
     public int dateBirth() {
-//        int a = (Year.now().getValue()) - age;
-
         return (Year.now().getValue()) - age;
+    }
+
+    @Override
+    public String toString() {
+        return "{" + name + " " + middleName + " " + familyName + " " + age + "}";
     }
 }

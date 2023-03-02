@@ -36,4 +36,9 @@ public class Person {
     public void setFamilyName(String familyName) {
         this.familyName = familyName;
     }
+
+    @Override
+    public String toString() {
+        return "{" + name + " " + middleName + " " + familyName + "}";
+    }
 }
