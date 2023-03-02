@@ -28,9 +28,6 @@ public class Main {
             begin++;
         }
 
-        // Замечания: сделать счётчик всех переменных,
-        //            реализовать average чётных чисел
-
         System.out.println("AverageAll is: " + (resultAll / countAll));
         System.out.println("AverageOdd is: " + (resultEven / countEven));
     }

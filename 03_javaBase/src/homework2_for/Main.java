@@ -10,11 +10,8 @@ public class Main {
         }
     }
 
-    // Замечания: Переименовать и упростить функцию
-
     public static boolean isQuadruple(int i) {
         return (i % 4) == 0 ? true : false;
     }
 
 }
-// Замечания: Переименовать и упростить функцию
