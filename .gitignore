@@ -21,12 +21,7 @@
 *.iml
 
 # Project gen files
-.idea/.name
-.idea/compiler.xml
-.idea/jarRepositories.xml
-.idea/misc.xml
-.idea/vcs.xml
-.idea/workspace.xml
+.idea/
 .allure/
 .gradle/
 allure-results/
