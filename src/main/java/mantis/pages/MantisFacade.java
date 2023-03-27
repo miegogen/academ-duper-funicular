@@ -7,6 +7,7 @@ public class MantisFacade {
     private LoginPage loginPage;
     private PasswordPage passwordPage;
     private MainPage mainPage;
+    private ViewIssuePage viewIssuePage;
 
     public MantisFacade(WebDriver driver) {
         this.driver = driver;
@@ -14,6 +15,7 @@ public class MantisFacade {
         loginPage = new LoginPage(driver);
         passwordPage = new PasswordPage(driver);
         mainPage = new MainPage(driver);
+        viewIssuePage = new ViewIssuePage(driver);
     }
 
     public void login(String login, String password) {
@@ -33,5 +35,7 @@ public class MantisFacade {
         return mainPage;
     }
 
-
+    public ViewIssuePage getViewIssuePage() {
+        return viewIssuePage;
+    }
 }

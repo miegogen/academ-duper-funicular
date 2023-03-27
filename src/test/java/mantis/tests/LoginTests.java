@@ -48,8 +48,8 @@ public class LoginTests extends BaseTest{
 
         SoftAssertions softAssertions = new SoftAssertions();
 
-        softAssertions.assertThat(currentAssignedBlockTitle).isEqualTo("Assigned @to Me (Unresolved)");
-        softAssertions.assertThat(mantisFacade.getMainPage().isAssignedToMeBlockDisplayed()).isEqualTo(false);
+        softAssertions.assertThat(currentAssignedBlockTitle).isEqualTo("Assigned to Me (Unresolved)");
+        softAssertions.assertThat(mantisFacade.getMainPage().isAssignedToMeBlockDisplayed()).isEqualTo(true);
         softAssertions.assertThat(mantisFacade.getMainPage().isUnassignedToMeBlockDisplayed()).isEqualTo(true);
 
         softAssertions.assertAll();

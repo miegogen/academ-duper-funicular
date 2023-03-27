@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class MainPage {
     private final WebDriver driver;
-    private final WebDriverWait wait;
+//    private final WebDriverWait wait;
 
     @FindBy(css = "span.user-info")
     private WebElement userName;
@@ -27,7 +27,7 @@ public class MainPage {
         this.driver = driver;
 
         // не совсем понял зачем здесь wait нужен, т.к. он не прописан в настройки driver как implicit и не применяется explicit
-        wait = new WebDriverWait(driver, 30, 500);
+//        wait = new WebDriverWait(driver, 30, 500);
 
         PageFactory.initElements(driver, this);
     }
