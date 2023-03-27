@@ -16,9 +16,10 @@ public class LoginPage {
 
     public LoginPage(WebDriver driver) {
         this.driver = driver;
+
+        // не совсем понял зачем здесь wait нужен, т.к. он не прописан в настройки driver как implicit и не применяется explicit
         wait = new WebDriverWait(driver, 30, 500);
 
-        // Непонятная строка =(
         PageFactory.initElements(driver, this);
     }
 
