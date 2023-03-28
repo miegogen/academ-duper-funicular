@@ -25,6 +25,7 @@ public class LoginTests extends BaseTest{
     public void successfulLoginTest() {
         mantisFacade = new MantisFacade(driver);
         mantisFacade.login("admin", "admin20");
+//        //h4[contains(text(), "Viewing Issues")]
 
         String currentUserName = mantisFacade.getMainPage().getUserName();
         Assertions.assertEquals("admin", currentUserName);
@@ -53,5 +54,21 @@ public class LoginTests extends BaseTest{
         softAssertions.assertThat(mantisFacade.getMainPage().isUnassignedToMeBlockDisplayed()).isEqualTo(true);
 
         softAssertions.assertAll();
+    }
+
+    @Test
+    public void loginErrorTest() {
+        mantisFacade = new MantisFacade(driver);
+        mantisFacade.login("admin", "incorrectPassword");
+
+        String actualErrorMessage = mantisFacade.getPasswordPage().getErrorMessage();
+
+        if (!actualErrorMessage.contains("Your")) {
+            Assertions.assertEquals("Возможно, ваша учетная запись заблокирована, или" +
+                            " введенное регистрационное имя/пароль неправильны.", actualErrorMessage);
+        } else {
+            Assertions.assertEquals("Your account may be disabled or blocked or the" +
+                            " username/password you entered is incorrect.", actualErrorMessage);
+        }
     }
 }
