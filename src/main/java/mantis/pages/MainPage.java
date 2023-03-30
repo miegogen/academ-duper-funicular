@@ -17,6 +17,9 @@ public class MainPage {
     @FindBy(css = "a[href='/mantisbt/view_all_bug_page.php")
     private WebElement viewIssuesPageButton;
 
+    @FindBy(css = "a[href='/mantisbt/bug_report_page.php']")
+    private WebElement reportIssue;
+
     @FindBy(xpath = "//*[@id='assigned']")
     private WebElement assignedToMeBlock;
 
@@ -38,6 +41,10 @@ public class MainPage {
 
     public void goToViewIssuesPage() {
         viewIssuesPageButton.click();
+    }
+
+    public void goToReportIssuePage() {
+        reportIssue.click();
     }
 
     public boolean isAssignedToMeBlockDisplayed() {
