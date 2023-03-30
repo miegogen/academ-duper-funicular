@@ -1,12 +1,13 @@
-package mantis.tests;
+package mantis.homework;
 
+import mantis.tests.BaseTest;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 import java.util.List;
 
-public class HW_Framework extends BaseTest{
+public class HW_Framework extends BaseForHomeWork {
 
     @Test
     public void reportAndDeleteIssueTest() {
