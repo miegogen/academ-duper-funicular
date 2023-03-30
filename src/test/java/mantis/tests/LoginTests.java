@@ -7,8 +7,6 @@ import org.junit.jupiter.api.Test;
 
 public class LoginTests extends BaseTest{
 
-    // Так как перед каждым тестом автоматом сработает @BeforeEach из BaseTest, то сразу нужно приступать к делу без расшаркиваний
-
     @Test
     public void loginUrlTest() {
         String currentUrl = driver.getCurrentUrl();
@@ -25,7 +23,6 @@ public class LoginTests extends BaseTest{
     public void successfulLoginTest() {
         mantisFacade = new MantisFacade(driver);
         mantisFacade.login("admin", "admin20");
-//        //h4[contains(text(), "Viewing Issues")]
 
         String currentUserName = mantisFacade.getMainPage().getUserName();
         Assertions.assertEquals("admin", currentUserName);

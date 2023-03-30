@@ -27,8 +27,7 @@ public class ViewIssueTest extends BaseTest {
         mantisFacade.getMainPage().goToViewIssuesPage();
 
         List<WebElement> issues = mantisFacade.getViewIssuePage().getIssues();
-//        WebElement element = issues.get(0);
-//        element.
+
         for (WebElement issue :
                 issues) {
             WebElement element = issue.findElement(By.className("column-summary"));
