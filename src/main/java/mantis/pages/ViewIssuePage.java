@@ -9,12 +9,10 @@ import java.util.List;
 
 public class ViewIssuePage {
     private final WebDriver driver;
-//    private final WebDriverWait wait;
 
     @FindBy(css = "#buglist tbody tr")
     private List<WebElement> issues;
 
-//    //*[normalize-space()="Viewing Issues 1 - 50 / 22953"]
     @FindBy(xpath = "(//h4[@class='widget-title lighter'])[2]")
     private WebElement viewingIssues;
 
