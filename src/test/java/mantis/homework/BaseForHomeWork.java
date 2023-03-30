@@ -17,6 +17,7 @@ public class BaseForHomeWork {
     protected MantisFacade mantisFacade;
     public Properties properties;
 
+    @BeforeEach
     void mantisLogin() {
         readConfig();
         mantisFacade = new MantisFacade(driver);
@@ -29,7 +30,6 @@ public class BaseForHomeWork {
 
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
-
         driver.get(properties.getProperty("url"));
         driver.manage().window().maximize();
     }
@@ -41,7 +41,6 @@ public class BaseForHomeWork {
 
     public void readConfig() {
         properties = new Properties();
-
         String absolutePath = new File("src/main/resources/config.properties").getAbsolutePath();
 
         try (FileInputStream fileInputStream = new FileInputStream(absolutePath)) {

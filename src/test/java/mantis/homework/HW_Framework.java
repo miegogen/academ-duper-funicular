@@ -12,8 +12,6 @@ public class HW_Framework extends BaseForHomeWork {
 
     @Test
     public void reportAndDeleteIssueTest() {
-        mantisLogin();
-
         mantisFacade.getMainPage().goToReportIssuePage();
 
         SoftAssertions reportIssueAssertion = new SoftAssertions();
