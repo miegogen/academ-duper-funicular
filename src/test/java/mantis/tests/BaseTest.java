@@ -7,6 +7,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
@@ -41,8 +42,9 @@ public class BaseTest {
     public void readConfig() {
         properties = new Properties();
 
-        try (FileInputStream fileInputStream =
-                     new FileInputStream("/Users/mac/IdeaProjects/academ/seleniumPageObj/src/main/resources/config.properties")) {
+        String absolutePath = new File("src/main/resources/config.properties").getAbsolutePath();
+
+        try (FileInputStream fileInputStream = new FileInputStream(absolutePath)) {
             properties.load(fileInputStream);
         } catch (IOException e) {
             e.printStackTrace();
