@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 
 import java.util.List;
 
-public class HWTest extends BaseTest{
+public class HW_Framework extends BaseTest{
 
     @Test
     public void reportAndDeleteIssueTest() {
